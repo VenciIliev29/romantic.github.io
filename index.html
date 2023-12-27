@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Go Out With Me?</title>
+  <style>
+    body {
+      background-color: pink;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #message {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    #gif {
+      width: 200px; /* Adjust the size as needed */
+      transition: transform 0.5s ease; /* Add transition effect for smoother change */
+    }
+
+    #answerContainer {
+      position: relative;
+    }
+
+    #answerYes, #answerNo {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: white;
+      color: #000;
+      text-decoration: none;
+      position: absolute;
+    }
+
+    #answerYes {
+      left: -100px; /* Adjust the left position as needed */
+    }
+
+    #answerNo {
+      animation: moveLeftAndRight 1s infinite alternate linear; /* Adjust the animation duration and type as needed */
+    }
+
+    @keyframes moveLeftAndRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(230px); /* Adjust the distance as needed */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="message">
+  <img id="gif" src="https://3.bp.blogspot.com/-ujikvojxhQE/Wp_sFsLtLPI/AAAAAAACPUM/sFFGVieltbUQFg3_-b-fD5TD3BzTGDmowCLcBGAs/s1600/AW829325_00.gif" alt="Initial GIF"> <!-- Replace "your_initial_gif_url_here.gif" with the URL of your initial GIF -->
+  <p id="caption">Will you go out with me, Magdalena?</p>
+</div>
+
+<div id="answerContainer">
+  <a id="answerYes" onclick="showCongratulations()">Yes</a>
+  <a id="answerNo" onclick="showNo()">No</a>
+</div>
+
+<script>
+  function showCongratulations() {
+    
+
+    // Change the GIF when "Yes" is clicked
+    document.getElementById("gif").src = "https://media2.giphy.com/media/a8yQ78qONgObZ8nJHC/giphy.gif?cid=6c09b952ao3weutwkkd13ig9h6qruzkyil144e38xxmksqbm"; // Replace "your_new_gif_url_here.gif" with the URL of your new GIF
+
+    // Change the caption text
+    document.getElementById("caption").innerText = "See you soon in the new year";
+  }
+
+  function showNo() {
+    
+
+    // Change the caption text
+    document.getElementById("caption").innerText = "I would wait for you again";
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
